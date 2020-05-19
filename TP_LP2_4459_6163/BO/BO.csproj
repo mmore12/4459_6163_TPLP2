@@ -41,7 +41,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Animal.cs" />
+    <Compile Include="BoletimSanitario.cs" />
+    <Compile Include="Cao.cs" />
+    <Compile Include="Funcionario.cs" />
+    <Compile Include="Parque.cs" />
+    <Compile Include="ParqueAnimal.cs" />
+    <Compile Include="Pessoa.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Setor.cs" />
+    <Compile Include="Socio.cs" />
+    <Compile Include="Vacina.cs" />
+    <Compile Include="Veterinario.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="BODiagram.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

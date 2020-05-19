@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +11,7 @@ namespace TP_LP2_4459_6163
     {
         static void Main(string[] args)
         {
+
         }
     }
 }
