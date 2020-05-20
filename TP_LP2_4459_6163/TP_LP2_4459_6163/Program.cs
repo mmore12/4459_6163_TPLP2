@@ -19,8 +19,11 @@ namespace TP_LP2_4459_6163
             Console.WriteLine(c2.ToString());
             try
             {
-                RegrasParque.InsereCao(c);
-                RegrasParque.InsereCao(c2);
+                if (RegrasParque.InsereCao(c2) == true)
+                    Console.WriteLine("ID: " + c2.Id);
+                else
+                    Console.WriteLine("Insucesso");
+
             }
             catch (Exception e)
             {

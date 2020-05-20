@@ -17,8 +17,10 @@ namespace BR
         {
             try
             {
-                
-                return DadosParque.AddCao(c);
+                if(c.Id < 0)
+                    return false;
+                else
+                    return DadosParque.AddCao(c);
             }
             catch(Exception e)
             {

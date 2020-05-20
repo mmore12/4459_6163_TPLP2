@@ -30,15 +30,12 @@ namespace DAL
             foreach (Cao cao in caes)
             {
                 //valida se o cao já existe
-                if(cao.Id == c.Id || c.Id <0)
+                if(cao.Id == c.Id)
                 { 
                     return false; 
                 }
-                else
-                {
-                    caes.Add(c);
-                }
             }
+            caes.Add(c);
             return true;
         }
     }
