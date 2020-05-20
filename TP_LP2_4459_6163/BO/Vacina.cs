@@ -22,40 +22,54 @@ namespace BO
     /// <example></example>
     public class Vacina
     {
-        #region Attributes
-        #endregion
-
-        #region Methods
-
-        #region Constructors
-
-        /// <summary>
-        /// The default Constructor.
-        /// </summary>
-        public Vacina()
-        {
-        }
-
+        #region Estado
+        string nome;
+        string tipo;
+        int id;
         #endregion
 
         #region Properties
-        #endregion
-
-        #region Functions
-        #endregion
-
-        #region Overrides
-        #endregion
-
-        #region Destructor
         /// <summary>
-        /// The destructor.
+        /// Nome da vacina
         /// </summary>
-        ~Vacina()
+        public string Nome
         {
+            get { return nome; }
+            set { nome = value; }
+        }
+
+        /// <summary>
+        /// Tipo de vacina
+        /// </summary>
+        public string Tipo
+        {
+            get { return tipo; }
+            set { tipo = value; }
+        }
+
+        /// <summary>
+        /// Id da vacina
+        /// </summary>
+        public int Id
+        {
+            get { return id; }
+            set { id = value; }
         }
         #endregion
 
+        #region Contrutores
+        /// <summary>
+        /// Criar uma vacina com nome, tipo e quantidade
+        /// </summary>
+        /// <param name="n">nome da vacina</param>
+        /// <param name="t">tipo de vacina</param>
+        /// <param name="q">quantidade de vacina</param>
+        public Vacina(string n, string t, int i)
+        {
+            nome = n;
+            tipo = t;
+            id = i;
+        }
         #endregion
     }
 }
