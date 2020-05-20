@@ -14,7 +14,7 @@ using System.Threading.Tasks;
 namespace TP_LP2_4459_6163
 {
     /// <summary>
-    /// Purpose: Classe para criar um animal
+    /// Purpose: Classe para manipular um animal
     /// Created by: CaronesE
     /// Created on: 5/17/2020 11:16:04 PM
     /// </summary>
@@ -31,7 +31,6 @@ namespace TP_LP2_4459_6163
         #region Methods
 
         #region Constructors
-
         /// <summary>
         /// The default Constructor.
         /// </summary>
@@ -39,12 +38,12 @@ namespace TP_LP2_4459_6163
         {
         }
         /// <summary>
-        /// Constructor with all elements of animal
+        /// Construtor para criar um animal com todos os elementos
         /// </summary>
-        /// <param name="n">animal name</param>
-        /// <param name="r">animal breed</param>
-        /// <param name="g">animal genre</param>
-        /// <param name="d">animal birth date</param>
+        /// <param name="n">nome do animal</param>
+        /// <param name="r">raça do animal</param>
+        /// <param name="g">gênero do animal</param>
+        /// <param name="d">data nascimento do animal</param>
         public Animal(string n, string r, string g, DateTime d)
         {
             nome = n;
@@ -56,7 +55,7 @@ namespace TP_LP2_4459_6163
 
         #region Properties
         /// <summary>
-        /// Propertie to manage the animal ID
+        /// Propertie para manipular ID do animal
         /// </summary>
         public int Id
         {
@@ -64,7 +63,7 @@ namespace TP_LP2_4459_6163
             set { id = value; }
         }
         /// <summary>
-        /// Propertie to manage the name of animal
+        /// Propertie para manipular nome do animal
         /// </summary>
         public string Nome
         {
@@ -72,7 +71,7 @@ namespace TP_LP2_4459_6163
             set { nome = value; }
         }
         /// <summary>
-        /// Propertie to manage the breed of animal
+        /// Propertie para manipular raça do animal
         /// </summary>
         public string Raca
         {
@@ -80,7 +79,7 @@ namespace TP_LP2_4459_6163
             set { raca = value; }
         }
         /// <summary>
-        /// Propertie to manage the animal genre
+        /// Propertie para manipular genero do animal
         /// </summary>
         public string Genero
         {
@@ -88,7 +87,7 @@ namespace TP_LP2_4459_6163
             set { genero = value; }
         }
         /// <summary>
-        /// Propertie to manage the animal birth date
+        /// Propertie para manipular data nascimento do animal
         /// </summary>
         public DateTime Data_Nasc
         {
@@ -101,6 +100,15 @@ namespace TP_LP2_4459_6163
         #endregion
 
         #region Overrides
+        /// <summary>
+        /// Override do metodo tostring
+        /// </summary>
+        /// <returns>Retorna todos os dados do cão</returns>
+        public override string ToString()
+        {
+            string aux = ("Nome: " + nome + " Raça: " + raca + " Gênero: " + genero + " Data de Nascimento: " + data_Nasc);
+            return aux;
+        }
         #endregion
 
         #region Destructor
