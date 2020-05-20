@@ -103,7 +103,7 @@ namespace TP_LP2_4459_6163
         /// <summary>
         /// Override do metodo tostring
         /// </summary>
-        /// <returns>Retorna todos os dados do cão</returns>
+        /// <returns>Retorna todos os dados do animal</returns>
         public override string ToString()
         {
             string aux = ("Nome: " + nome + " Raça: " + raca + " Gênero: " + genero + " Data de Nascimento: " + data_Nasc);
