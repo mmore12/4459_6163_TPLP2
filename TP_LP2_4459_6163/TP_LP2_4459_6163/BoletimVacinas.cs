@@ -17,7 +17,7 @@ namespace TP_LP2_4459_6163
     {
         #region Attributes
         DateTime data_Vacina;
-        int n_ordem;
+        int n_ordem, id_Animal, id_Vacina;
         #endregion
 
         #region Methods
@@ -27,7 +27,7 @@ namespace TP_LP2_4459_6163
         /// <summary>
         /// The default Constructor.
         /// </summary>
-        public BoletimVacinas()
+        public BoletimVacinas(int id_Cao)
         {
         }
 
