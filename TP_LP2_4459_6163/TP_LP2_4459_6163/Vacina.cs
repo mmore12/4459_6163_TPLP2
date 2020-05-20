@@ -14,7 +14,7 @@ namespace TP_LP2_4459_6163
         #region Estado
         string nome;
         string tipo;
-        int qtd;
+        int id;
         #endregion
 
         #region Properties
@@ -37,12 +37,12 @@ namespace TP_LP2_4459_6163
         }
 
         /// <summary>
-        /// Quantidade em stock
+        /// Id da vacina
         /// </summary>
-        public int Qtd
+        public int Id
         {
-            get { return qtd; }
-            set { qtd = value; }
+            get { return id; }
+            set { id = value; }
         }
         #endregion
 
@@ -53,11 +53,11 @@ namespace TP_LP2_4459_6163
         /// <param name="n">nome da vacina</param>
         /// <param name="t">tipo de vacina</param>
         /// <param name="q">quantidade de vacina</param>
-        public Vacina(string n, string t, int q)
+        public Vacina(string n, string t, int i)
         {
             nome = n;
             tipo = t;
-            qtd = q;
+            id = i;
         }
         #endregion
     }
