@@ -45,7 +45,7 @@ namespace BO
         /// <param name="n">nome proveniente da classe pessoas</param>
         /// <param name="ida">idade proveniente da classe pessoas</param>
         /// <param name="f">funcao proveniente da classe pessoas</param>
-        public Veterinario(DateTime data, int i, string n, DateTime ida, string f) : base(n, ida, f)
+        public Veterinario(DateTime data, int i, string n, DateTime ida, string f) : base(n, f, ida)
         {
             dataAdmissao = data;
             id = i;

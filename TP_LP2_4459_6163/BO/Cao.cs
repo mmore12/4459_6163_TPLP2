@@ -75,6 +75,11 @@ namespace BO
         #endregion
 
         #region Overrides
+        public override string ToString()
+        {
+            string aux = ("ID: " + base.Id + " Nome: " + base.Nome + " Raça: " + base.Raca + " Gênero: " + base.Genero + " Data de Nascimento: " + base.Data_Nasc + " Porte: " + porte + " Personalidade: " + personalidade);
+            return aux;
+        }
         #endregion
 
         #region Destructor

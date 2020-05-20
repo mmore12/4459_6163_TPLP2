@@ -43,7 +43,7 @@ namespace BO
         /// <param name="n">nome do funcionario herdado da classe pessoas</param>
         /// <param name="i">idade do funcionario herdado da classe pessoas</param>
         /// <param name="f">funcao do funcionario herdado da classe pessoas</param>
-        public Funcionario(DateTime data, string n, DateTime i, string f) : base(n, i, f)
+        public Funcionario(DateTime data, string n, DateTime i, string f) : base(n, f, i)
         {
             dataAdmissao = data;
         }
