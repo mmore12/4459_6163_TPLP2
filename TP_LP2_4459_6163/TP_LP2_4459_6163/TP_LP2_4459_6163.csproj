@@ -43,12 +43,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Animal.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BO\BO.csproj">
+      <Project>{88248a0e-99d9-4204-8bcc-9662b1329546}</Project>
+      <Name>BO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BR\BR.csproj">
+      <Project>{32bb9e55-7474-4eb1-bd8b-32a62b8592a1}</Project>
+      <Name>BR</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

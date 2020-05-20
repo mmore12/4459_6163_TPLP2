@@ -23,7 +23,7 @@ namespace BO
     public class Animal
     {
         #region Attributes
-        int id;
+        int id = 0;
         string nome, raca, genero;
         DateTime data_Nasc;
         #endregion
@@ -50,6 +50,7 @@ namespace BO
             raca = r;
             genero = g;
             data_Nasc = d;
+            id++;
         }
         #endregion
 
