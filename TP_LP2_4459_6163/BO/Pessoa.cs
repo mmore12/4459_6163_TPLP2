@@ -9,6 +9,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 
 namespace BO
@@ -46,7 +47,6 @@ namespace BO
             this.pNome = pNome;
             this.uNome = uNome;
             this.dataNasc = dataNasc;
-
         }
 
         #endregion
@@ -58,25 +58,22 @@ namespace BO
             set { pNome = value; }
         }
 
+        public string UNome {
+            get { return uNome; }
+            set { uNome = value; }
+        }
 
-
-        #endregion
-
-        #region Functions
+        public DateTime DataNasc {
+            get { return dataNasc; }
+            set { dataNasc = value; }
+        }
         #endregion
 
         #region Overrides
         #endregion
 
-        #region Destructor
-        /// <summary>
-        /// The destructor.
-        /// </summary>
-        ~Pessoa()
-        {
-        }
         #endregion
 
-        #endregion
+
     }
 }

@@ -23,6 +23,10 @@ namespace BO
     public class Socio : Pessoa
     {
         #region Attributes
+        static int nSOCIO = 0;
+        
+        DateTime dataInsc;
+
         #endregion
 
         #region Methods
