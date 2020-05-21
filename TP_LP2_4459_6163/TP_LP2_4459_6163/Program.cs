@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using BO;
 using BR;
+using Excecoes;
 
 namespace TP_LP2_4459_6163
 {
@@ -12,6 +13,7 @@ namespace TP_LP2_4459_6163
     {
         static void Main(string[] args)
         {
+            #region Cao
             Cao c = new Cao("Bolinhas", "terrier", "macho", DateTime.Today, "médio", "meigo");
             Cao c2 = new Cao("Bolinhas", "terrier", "macho", DateTime.Today, "médio", "meigo");
             Console.WriteLine(c.ToString());
@@ -19,16 +21,33 @@ namespace TP_LP2_4459_6163
             Console.WriteLine(c2.ToString());
             try
             {
-                if (RegrasParque.InsereCao(c2) == true)
-                    Console.WriteLine("ID: " + c2.Id);
-                else
-                    Console.WriteLine("Insucesso");
+                if (RegrasParque.InsereCao(c) == true)
+                    Console.WriteLine("ID: " + c.Id);
+                //else
+                //    Console.WriteLine("Insucesso");
 
             }
-            catch (Exception e)
+            catch (Excecao e)
             {
                 throw e;
             }
+            #endregion
+
+            #region Boletim Sanitario
+            Vacina v = new Vacina("Vacina antirrábica", "Imunológica", -1);
+            try
+            {
+                if (RegrasParque.InsereVacina(v) == true)
+                    Console.WriteLine("ID: " + v.Id);
+                //else
+                //    Console.WriteLine("Insucesso");
+
+            }
+            catch (Excecao e)
+            {
+                throw e;
+            }
+            #endregion
             Console.ReadKey();
         }
     }
