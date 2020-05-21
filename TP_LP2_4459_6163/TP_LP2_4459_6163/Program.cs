@@ -13,6 +13,7 @@ namespace TP_LP2_4459_6163
     {
         static void Main(string[] args)
         {
+
             #region Cao
             Cao c = new Cao("Bolinhas", "terrier", "macho", DateTime.Today, "médio", "meigo");
             Cao c2 = new Cao("Bolinhas", "terrier", "macho", DateTime.Today, "médio", "meigo");
@@ -48,6 +49,8 @@ namespace TP_LP2_4459_6163
                 Console.WriteLine(e.Message);
             }
             #endregion
+
+
             Console.ReadKey();
         }
     }

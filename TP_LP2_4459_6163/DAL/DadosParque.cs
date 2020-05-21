@@ -1,5 +1,6 @@
 ﻿using BO;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,26 +13,26 @@ namespace DAL
     /// </summary>
     public class DadosParque
     {
-<<<<<<< HEAD
+
         private static List<Cao> caes;
 
-=======
-        private static ArrayList caes;
+
+        //private static ArrayList caes;
         private static ArrayList boletins;
         private static ArrayList vacinas;
->>>>>>> 0c14115a33d80b60e4f23ab16b740953663d7e90
+
         /// <summary>
         /// 
         /// </summary>
         static DadosParque()
         {
-<<<<<<< HEAD
+
             caes = new List<Cao>();
-=======
-            caes = new ArrayList();
+
+            //caes = new ArrayList();
             boletins = new ArrayList();
             vacinas = new ArrayList();
->>>>>>> 0c14115a33d80b60e4f23ab16b740953663d7e90
+
         }
         /// <summary>
         /// 
@@ -49,13 +50,12 @@ namespace DAL
                 }
             }
             caes.Add(c);
-<<<<<<< HEAD
-=======
+
             return true;
         }
-        #endregion
 
-        #region Dados relacionados com BoletimSanitario
+
+        
         /// <summary>
         /// Adicionar uma vacina
         /// </summary>
@@ -90,7 +90,7 @@ namespace DAL
                 }
             }
             boletins.Add(bol);
->>>>>>> 0c14115a33d80b60e4f23ab16b740953663d7e90
+
             return true;
         }
     }

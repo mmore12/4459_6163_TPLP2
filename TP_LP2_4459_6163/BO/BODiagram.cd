@@ -1,51 +1,58 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="BO.Socio" Collapsed="true">
-    <Position X="14" Y="6.25" Width="1.5" />
+  <Class Name="BO.Socio">
+    <Position X="14.5" Y="0.5" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="BO.Socio.CATEGORIA" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Socio.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAIABAAiAAAAIAAAAAAAAAAAAAQAAAAAAAA=</HashCode>
       <FileName>Socio.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="BO.Pessoa">
-    <Position X="14" Y="3.5" Width="1.5" />
+    <Position X="12.5" Y="4.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAEAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAgA=</HashCode>
+      <HashCode>AAAAQAMAAEABAAAAAAAAAAAAAAAAAAAACAAAAAgAAgA=</HashCode>
       <FileName>Pessoa.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="BO.Funcionario" Collapsed="true">
-    <Position X="14" Y="1" Width="1.5" />
+  <Class Name="BO.Funcionario">
+    <Position X="12.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AIAAAAAAAAACAAAAAgAAABAAAAAQAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Funcionario.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="BO.Cao" Collapsed="true">
     <Position X="4.5" Y="4.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAEEAAABAAAAAAAAEAAAABAAAAAAAAA=</HashCode>
       <FileName>Cao.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="BO.Animal" Collapsed="true">
     <Position X="4.5" Y="3" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AQQCAAAEAAAAAAAEAAAAAAIAAAACAAAAAACAAAEAggA=</HashCode>
       <FileName>Animal.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="BO.Veterinario" Collapsed="true">
-    <Position X="11.25" Y="3.5" Width="1.5" />
+  <Class Name="BO.Veterinario">
+    <Position X="10" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAACAAAAAAACAAAAAgAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
       <FileName>Veterinario.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="BO.Vacina" Collapsed="true">
     <Position X="7.75" Y="4.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AQACBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAgQ=</HashCode>
       <FileName>Vacina.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -66,7 +73,7 @@
   <Class Name="BO.BoletimSanitario" Collapsed="true">
     <Position X="7.75" Y="3" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>QAAAAAAEAAAABAAAAAAAAAAAAAAAAAAEAAAQBEAAEAA=</HashCode>
       <FileName>BoletimSanitario.cs</FileName>
     </TypeIdentifier>
   </Class>
