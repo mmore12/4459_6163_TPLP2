@@ -38,14 +38,14 @@ namespace TP_LP2_4459_6163
             try
             {
                 if (RegrasParque.InsereVacina(v) == true)
-                    Console.WriteLine("ID: " + v.Id);
-                //else
-                //    Console.WriteLine("Insucesso");
+                    Console.WriteLine("ID vacina: " + v.Id);
+                else
+                    Console.WriteLine("Insucesso");
 
             }
             catch (Excecao e)
             {
-                throw e;
+                Console.WriteLine(e.Message);
             }
             #endregion
             Console.ReadKey();
