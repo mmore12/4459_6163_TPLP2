@@ -38,18 +38,11 @@ namespace BR
         /// <returns></returns>
         public static bool InsereVacina(Vacina v)
         {
-            try
-            {
-                //apenas adiciona caso o ID seja positivo, não é permitido ID's negativos
-                if (v.Id < 0)
-                    return false;
-                else
-                    return DadosParque.AddVacina(v);
-            }
-            catch (Excecao e)
-            {
-                throw e;
-            }
+            //apenas adiciona caso o ID seja positivo, não é permitido ID's negativos
+            if (v.Id >= 0)
+                return DadosParque.AddVacina(v);
+            else return false;
+          
         }
         #endregion
     }
