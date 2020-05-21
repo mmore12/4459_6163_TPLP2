@@ -10,6 +10,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Xml.Schema;
 
 namespace BO
 {
@@ -23,38 +24,49 @@ namespace BO
     public class Funcionario : Pessoa
     {
         #region Attributes
+
+        static int totFunc;
+
+        int idFunc;
         DateTime dataAdmissao;
+
         #endregion
 
         #region Methods
 
         #region Constructors
-
         /// <summary>
-        /// The default Constructor.
+        /// construtor da class que inicializa o total de funcionarios para atribuir automaticamente o ID
         /// </summary>
+        static Funcionario()
+        {
+            totFunc = 0;
+        }
+
+
         public Funcionario()
         {
+            idFunc = ++totFunc;
         }
-        /// <summary>
-        /// Criar um funcionario
-        /// </summary>
-        /// <param name="data">data de admissao</param>
-        /// <param name="n">nome do funcionario herdado da classe pessoas</param>
-        /// <param name="i">idade do funcionario herdado da classe pessoas</param>
-        /// <param name="f">funcao do funcionario herdado da classe pessoas</param>
-        public Funcionario(DateTime data, string n, DateTime i, string f) : base(n, f, i)
+
+        public Funcionario(DateTime dataAdmissao, string pNome, string uNome, DateTime dataNasc) : base(pNome, uNome, dataNasc)
         {
-            dataAdmissao = data;
+            idFunc = ++totFunc;
+            this.dataAdmissao = dataAdmissao;
         }
         #endregion
 
         #region Properties
+
+
+        public int IdFunc {
+            get { return idFunc; }
+        }
+
         /// <summary>
         /// Manipula o atributo Data de admissao
         /// </summary>
-        public DateTime DataAdmissao
-        {
+        public DateTime DataAdmissao {
             get { return dataAdmissao; }
             set { dataAdmissao = value; }
         }

@@ -30,7 +30,11 @@ namespace BR
         }
         #endregion
 
+        
+
         #region Regras para gerir um boletim sanitario
+
+        
         /// <summary>
         /// 
         /// </summary>
@@ -51,6 +55,8 @@ namespace BR
                 throw e;
             }
         }
+
+
         #endregion
     }
 }

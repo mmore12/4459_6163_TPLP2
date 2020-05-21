@@ -21,13 +21,17 @@ namespace BO
     /// </summary>
     /// <remarks></remarks>
     /// <example></example>
-    public class Pessoa
+    public abstract class Pessoa
     {
         #region Attributes
+
+        static int totPessoas;
+
         int id;
         string uNome;
         string pNome;
         DateTime dataNasc;
+
 
         #endregion
 
@@ -35,20 +39,29 @@ namespace BO
 
         #region Constructors
 
+
+        static Pessoa()
+        {
+            totPessoas = 0;
+        }
+
         /// <summary>
-        /// The default Constructor.
+        /// construtor por defeito
         /// </summary>
         public Pessoa()
         {
+            ++totPessoas;
         }
 
         public Pessoa(string pNome, string uNome, DateTime dataNasc)
         {
+            ++totPessoas;
+
             this.pNome = pNome;
             this.uNome = uNome;
             this.dataNasc = dataNasc;
         }
-
+        
         #endregion
 
         #region Properties
