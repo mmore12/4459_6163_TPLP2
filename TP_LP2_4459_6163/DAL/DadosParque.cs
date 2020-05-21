@@ -1,5 +1,6 @@
 ﻿using BO;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,22 +13,24 @@ namespace DAL
     /// </summary>
     public class DadosParque
     {
-        private static List<Cao> caes;
+        private static ArrayList dados;
         /// <summary>
         /// 
         /// </summary>
         static DadosParque()
         {
-            caes = new List<Cao>();
+            dados = new ArrayList();
         }
+
+        #region Dados relacionados com caes
         /// <summary>
-        /// 
+        /// Metodo para adicionar um cao ao array de dados
         /// </summary>
-        /// <param name="c"></param>
-        /// <returns></returns>
+        /// <param name="c">cao a adicionar</param>
+        /// <returns>retorna true se o cão não existir e insere o mesmo no arraylist</returns>
         public static bool AddCao(Cao c)
         {
-            foreach (Cao cao in caes)
+            foreach (Cao cao in dados)
             {
                 //valida se o cao já existe
                 if(cao.Id == c.Id)
@@ -35,8 +38,48 @@ namespace DAL
                     return false; 
                 }
             }
-            caes.Add(c);
+            dados.Add(c);
             return true;
         }
+        #endregion
+
+        #region Dados relacionados com BoletimSanitario
+        /// <summary>
+        /// Adicionar uma vacina
+        /// </summary>
+        /// <param name="vacina"></param>
+        /// <returns></returns>
+        public static bool AddVacina(Vacina vacina)
+        {
+            foreach (Vacina vacina1 in dados)
+            {
+                //valida se a vacina já existe
+                if (vacina1.Id == vacina.Id)
+                {
+                    return false;
+                }
+            }
+            dados.Add(vacina);
+            return true;
+        }
+        /// <summary>
+        /// Adicionar um boletim sanitario
+        /// </summary>
+        /// <param name="boletim"></param>
+        /// <returns></returns>
+        public static bool AddBoletim(BoletimSanitario boletim)
+        {
+            foreach (BoletimSanitario boletimSanitario in dados)
+            {
+                //valida se o boletim daquele animal já existe
+                if (boletimSanitario.Id_Animal == boletim.Id_Animal)
+                {
+                    return false;
+                }
+            }
+            dados.Add(boletim);
+            return true;
+        }
+        #endregion
     }
 }

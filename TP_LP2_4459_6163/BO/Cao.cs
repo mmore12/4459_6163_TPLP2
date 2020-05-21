@@ -71,13 +71,15 @@ namespace BO
         }
         #endregion
 
-        #region Functions
-        #endregion
-
         #region Overrides
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
-            string aux = ("ID: " + base.Id + " Nome: " + base.Nome + " Raça: " + base.Raca + " Gênero: " + base.Genero + " Data de Nascimento: " + base.Data_Nasc + " Porte: " + porte + " Personalidade: " + personalidade);
+            string aux = ("ID: " + base.Id + " Nome: " + base.Nome + " Raça: " + base.Raca + " Gênero: " + base.Genero + " Data de Nascimento: " 
+                + base.Data_Nasc + " Porte: " + porte + " Personalidade: " + personalidade);
             return aux;
         }
         #endregion

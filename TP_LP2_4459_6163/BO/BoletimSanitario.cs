@@ -42,17 +42,17 @@ namespace BO
 
         }
         /// <summary>
-        /// Construtor com vacinas
+        /// 
         /// </summary>
         /// <param name="id_Animal"></param>
-        /// <param name="n_ordem"></param>
-        /// <param name="vacinas"></param>
+        /// <param name="n_Ordem"></param>
+        /// <param name="tratamentos"></param>
         /// <param name="data_Vacina"></param>
-        public BoletimSanitario(int id_Animal, int n_Ordem, Vacina vacinas, DateTime data_Vacina)
+        public BoletimSanitario(int id_Animal, int n_Ordem, ArrayList tratamentos, DateTime data_Vacina)
         {
             this.id_Animal = id_Animal;
             this.n_Ordem = n_Ordem;
-            this.tratamentos.Add(vacinas);
+            this.tratamentos.Add(tratamentos);
             this.data_Vacina = data_Vacina;
         }
 
@@ -75,6 +75,23 @@ namespace BO
             get { return n_Ordem; }
             set { n_Ordem = value; }
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        public int Id_Animal
+        {
+            get { return id_Animal; }
+            set { id_Animal = value; }
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        public ArrayList Tratamentos
+        {
+            get { return tratamentos; }
+            set { tratamentos = value; }
+        }
+ 
         #endregion
 
         #region Functions

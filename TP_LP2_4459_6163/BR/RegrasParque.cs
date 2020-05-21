@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Excecoes;
 
 namespace BR
 {
@@ -21,10 +22,34 @@ namespace BR
         /// <returns>adiciona o cao e retorna verdadeiro, caso contrario retorna falso</returns>
         public static bool InsereCao (Cao c)
         {
+            //apenas adiciona caso o ID seja positivo, não é permitido ID's negativos
             if(c.Id < 0)
                return false;
             else
                return DadosParque.AddCao(c);
+        }
+        #endregion
+
+        #region Regras para gerir um boletim sanitario
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="v"></param>
+        /// <returns></returns>
+        public static bool InsereVacina(Vacina v)
+        {
+            try
+            {
+                //apenas adiciona caso o ID seja positivo, não é permitido ID's negativos
+                if (v.Id < 0)
+                    return false;
+                else
+                    return DadosParque.AddVacina(v);
+            }
+            catch (Excecao e)
+            {
+                throw e;
+            }
         }
         #endregion
     }

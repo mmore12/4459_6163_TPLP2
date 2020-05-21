@@ -64,11 +64,11 @@ namespace BO
         /// <param name="n">nome da vacina</param>
         /// <param name="t">tipo de vacina</param>
         /// <param name="q">quantidade de vacina</param>
-        public Vacina(string n, string t, int i)
+        public Vacina(string nome, string tipo, int id)
         {
-            nome = n;
-            tipo = t;
-            id = i;
+            this.nome = nome;
+            this.tipo = tipo;
+            this.id = id;
         }
         #endregion
     }
