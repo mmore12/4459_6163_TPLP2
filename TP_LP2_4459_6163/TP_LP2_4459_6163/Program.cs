@@ -18,7 +18,7 @@ namespace TP_LP2_4459_6163
             Cao c = new Cao("Bolinhas", "terrier", "macho", DateTime.Today, "médio", "meigo");
             Cao c2 = new Cao("Bolinhas", "terrier", "macho", DateTime.Today, "médio", "meigo");
             Console.WriteLine(c.ToString());
-            c2.Id = -1;
+            //c2.Id = -1;
             Console.WriteLine(c2.ToString());
             try
             {
@@ -32,6 +32,8 @@ namespace TP_LP2_4459_6163
             {
                 throw e;
             }
+
+            RegrasParque.ProcuraCao(1)
             #endregion
 
             #region Boletim Sanitario

@@ -15,11 +15,8 @@ namespace DAL
     {
 
         private static List<Cao> caes;
-
-
-        //private static ArrayList caes;
-        private static ArrayList boletins;
-        private static ArrayList vacinas;
+        private static List<BoletimSanitario> boletins;
+        private static List<Vacina> vacinas;
 
         /// <summary>
         /// 
@@ -28,12 +25,12 @@ namespace DAL
         {
 
             caes = new List<Cao>();
-
-            //caes = new ArrayList();
-            boletins = new ArrayList();
-            vacinas = new ArrayList();
+            boletins = new List<BoletimSanitario>();
+            vacinas = new List<Vacina>();
 
         }
+
+        #region Dados para gerir caes
         /// <summary>
         /// 
         /// </summary>
@@ -54,8 +51,24 @@ namespace DAL
             return true;
         }
 
+        /// <summary>
+        /// Procura um cao
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public static List<Cao> GetCao(int id)
+        {
+            if(id >= 0)
+            {
+                List<Cao> find = new List<Cao>();
+                find.Add(caes.Find(c => c.Id == id));
+                return find;
+            }
+            return null;
+        }
 
-        
+        #endregion
+
         /// <summary>
         /// Adicionar uma vacina
         /// </summary>

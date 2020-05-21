@@ -28,6 +28,16 @@ namespace BR
             else
                return DadosParque.AddCao(c);
         }
+
+
+        public static List<Cao> ProcuraCao(int id)
+        {
+            if(id >= 0)
+            {
+                return DadosParque.GetCao(id);
+            }
+            return null;
+        }
         #endregion
 
         
