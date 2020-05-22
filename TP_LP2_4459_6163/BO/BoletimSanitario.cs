@@ -16,11 +16,7 @@ namespace BO
 {
     /// <summary>
     /// Purpose:
-    /// Created by: CaronesE
-    /// Created on: 5/19/2020 11:15:21 PM
     /// </summary>
-    /// <remarks></remarks>
-    /// <example></example>
     public class BoletimSanitario
     {
         #region Attributes

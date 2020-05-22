@@ -43,7 +43,7 @@ namespace BR
             try
             {
                 //verifica se o ID é positivo
-                if (id >= 0)
+                if (id >= 0 && DadosCao.GetCao(id)!=null)
                 {
                     return DadosCao.GetCao(id);
                 }

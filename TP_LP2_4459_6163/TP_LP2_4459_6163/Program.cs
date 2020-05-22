@@ -45,7 +45,7 @@ namespace TP_LP2_4459_6163
             Console.WriteLine(c.ToString());
             Console.WriteLine(c2.ToString());
 
-            RegrasParque.ProcuraCao(-2);
+            RegrasParque.ProcuraCao(5);
            
             #endregion
 
