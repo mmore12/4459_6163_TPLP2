@@ -45,15 +45,15 @@ namespace TP_LP2_4459_6163
             Console.WriteLine(c.ToString());
             Console.WriteLine(c2.ToString());
 
-            if (RegrasParque.ProcuraCao(2) != null)
-            {
-
-                Console.WriteLine("O cão existe!");
-            }
+            RegrasParque.ProcuraCao(-2);
+           
             #endregion
 
             #region Boletim Sanitario
-
+        
+            //Vacina v = new Vacina("gripe", "imunologica");
+            //RegrasParque.InsereVacina(v);
+            
             //Vacinas disponiveis
             RegrasParque.ProcuraTodasVacinas();
                

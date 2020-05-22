@@ -2,9 +2,9 @@
 *	<copyright file="BO.cs" company="IPCA">
 *		Copyright (c) 2020 All Rights Reserved
 *	</copyright>
-* 	<author>CaronesE</author>
-*   <date>5/19/2020 11:15:21 PM</date>
-*	<description></description>
+* 	<author>Aurélien Bouça e Elden Carones</author>
+*   <date>5/19/2020</date>
+*	<description>Gerir um canil</description>
 **/
 using System;
 using System.Collections;
@@ -28,15 +28,9 @@ namespace BO
         int n_Ordem, id_Animal;
         //Arraylist para poder inserir tratamentos (vacinas, desparasitaçao, banhos)
         ArrayList tratamentos = new ArrayList();
-
-        
-
         #endregion
 
-        #region Methods
-
         #region Constructors
-
         /// <summary>
         /// The default Constructor.
         /// </summary>
@@ -45,12 +39,12 @@ namespace BO
 
         }
         /// <summary>
-        /// 
+        /// Construtor de um boletim sanitario
         /// </summary>
-        /// <param name="id_Animal"></param>
-        /// <param name="n_Ordem"></param>
-        /// <param name="tratamentos"></param>
-        /// <param name="data_Vacina"></param>
+        /// <param name="id_Animal">ID do animal</param>
+        /// <param name="n_Ordem">Numero do veterinario</param>
+        /// <param name="tratamentos">tratamos realizados</param>
+        /// <param name="data_Vacina">data da vacina</param>
         public BoletimSanitario(int id_Animal, int n_Ordem, ArrayList tratamentos, DateTime data_Vacina)
         {
             this.id_Animal = id_Animal;
@@ -63,7 +57,7 @@ namespace BO
 
         #region Properties
         /// <summary>
-        /// 
+        /// Manipular data da vacina
         /// </summary>
         public DateTime Data_Vacina
         {
@@ -71,7 +65,7 @@ namespace BO
             set { data_Vacina = value; }
         }
         /// <summary>
-        /// 
+        /// Manipular numero do veterinario
         /// </summary>
         public int N_Ordem
         {
@@ -79,7 +73,7 @@ namespace BO
             set { n_Ordem = value; }
         }
         /// <summary>
-        /// 
+        /// Manipular ID do animal
         /// </summary>
         public int Id_Animal
         {
@@ -87,20 +81,14 @@ namespace BO
             set { id_Animal = value; }
         }
         /// <summary>
-        /// 
+        /// Manipular os tratamentos
         /// </summary>
         public ArrayList Tratamentos
         {
             get { return tratamentos; }
             set { tratamentos = value; }
         }
- 
-        #endregion
 
-        #region Functions
-        #endregion
-
-        #region Overrides
         #endregion
 
         #region Destructor
@@ -112,6 +100,5 @@ namespace BO
         }
         #endregion
 
-        #endregion
     }
 }

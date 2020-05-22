@@ -43,13 +43,13 @@ namespace DAL
         /// <summary>
         /// Adicionar uma vacina
         /// </summary>
-        /// <param name="vacina"></param>
-        /// <returns></returns>
+        /// <param name="vacina">Vacina a adicionar</param>
+        /// <returns>retorna true se a vacina for inserida, caso contrario, falso</returns>
         public static bool AddVacina(Vacina vacina)
         {
             foreach (Vacina vacina1 in vacinas)
             {
-                //valida se a vacina já existe
+                //verifica se a vacina já existe
                 if (vacina1.Id == vacina.Id)
                 {
                     return false;
@@ -62,8 +62,7 @@ namespace DAL
         /// <summary>
         /// Mostra todas as vacinas
         /// </summary>
-        /// <param name="id"></param>
-        /// <returns></returns>
+        /// <returns>Imprime na consola todas as vacinas presentes na lista</returns>
         public static string GetAllVacinas()
         {
             //verifica se a lista tem vacinas
@@ -76,14 +75,13 @@ namespace DAL
                 }
             }
             return null;
-
         }
 
         /// <summary>
         /// Adicionar um boletim sanitario
         /// </summary>
-        /// <param name="boletim"></param>
-        /// <returns></returns>
+        /// <param name="bol">boletim a adicionar</param>
+        /// <returns>retorna true se o boletim for inserido, caso contrario, retorna false</returns>
         public static bool AddBoletim(BoletimSanitario bol)
         {
             foreach (BoletimSanitario boletimSanitario in boletins)

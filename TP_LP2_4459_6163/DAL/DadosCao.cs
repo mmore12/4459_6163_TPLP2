@@ -43,7 +43,7 @@ namespace DAL
         {
             foreach (Cao cao in caes)
             {
-                //valida se o cao já existe
+                //verifica se o cao já existe
                 if (cao.Id == c.Id)
                 {
                     return false;
@@ -68,7 +68,6 @@ namespace DAL
             }
             return null;
         }
-
         #endregion
 
 

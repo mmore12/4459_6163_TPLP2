@@ -30,30 +30,40 @@ namespace BR
         /// <returns>adiciona o cao e retorna verdadeiro, caso contrario retorna falso</returns>
         public static bool InsereCao (Cao c)
         {
-               return DadosCao.AddCao(c);
+            return DadosCao.AddCao(c);
         }
 
-
+        /// <summary>
+        /// Procura um cao pelo ID
+        /// </summary>
+        /// <param name="id">ID do cão</param>
+        /// <returns>retorna o cão, caso o encontre, se nao encontrar gera uma excecao</returns>
         public static string ProcuraCao(int id)
         {
-            if(id >= 0)
+            try
             {
-                return DadosCao.GetCao(id);
+                //verifica se o ID é positivo
+                if (id >= 0)
+                {
+                    return DadosCao.GetCao(id);
+                }
+                else
+                    throw new Excecao("Número invalido ou negativo!");
             }
-            return null;
+            catch (Excecao e)
+            {
+                Console.WriteLine(e.Message);
+                throw e;
+            }          
         }
         #endregion
 
-        
-
-        #region Regras para gerir um boletim sanitario
-
-        
+        #region Regras para gerir um boletim sanitario     
         /// <summary>
-        /// 
+        /// Insere vacina na lista de vacinas
         /// </summary>
-        /// <param name="v"></param>
-        /// <returns></returns>
+        /// <param name="v">vacina a inserir</param>
+        /// <returns>adiciona a vacina caso seja true, senao retorna falso</returns>
         public static bool InsereVacina(Vacina v)
         {
             //apenas adiciona caso o ID seja positivo, não é permitido ID's negativos
@@ -62,11 +72,11 @@ namespace BR
             else return false;
           
         }
+
         /// <summary>
         /// Procura todas as vacinas
         /// </summary>
-        /// <param name="id"></param>
-        /// <returns></returns>
+        /// <returns>Imprime todas as vacinas na consola</returns>
         public static string ProcuraTodasVacinas()
         {
            return DadosBoletim.GetAllVacinas();        
