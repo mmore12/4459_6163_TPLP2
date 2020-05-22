@@ -28,6 +28,9 @@ namespace BO
         int n_Ordem, id_Animal;
         //Arraylist para poder inserir tratamentos (vacinas, desparasitaçao, banhos)
         ArrayList tratamentos = new ArrayList();
+
+        
+
         #endregion
 
         #region Methods

@@ -22,10 +22,6 @@ namespace BR
         /// <returns>adiciona o cao e retorna verdadeiro, caso contrario retorna falso</returns>
         public static bool InsereCao (Cao c)
         {
-            //apenas adiciona caso o ID seja positivo, não é permitido ID's negativos
-            if(c.Id < 0)
-               return false;
-            else
                return DadosParque.AddCao(c);
         }
 
@@ -58,8 +54,15 @@ namespace BR
             else return false;
           
         }
-        
-
+        /// <summary>
+        /// Procura todas as vacinas
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public static string ProcuraTodasVacinas()
+        {
+           return DadosParque.GetAllVacinas();        
+        }
         #endregion
     }
 }

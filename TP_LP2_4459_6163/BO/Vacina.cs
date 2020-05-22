@@ -10,11 +10,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 
 namespace BO
 {
     /// <summary>
-    /// Purpose:
+    /// Purpose: Classe para gerir uma vacina
     /// Created by: CaronesE
     /// Created on: 5/19/2020 11:13:24 PM
     /// </summary>
@@ -26,6 +27,7 @@ namespace BO
         string nome;
         string tipo;
         int id;
+        static int vacinaId;
         #endregion
 
         #region Properties
@@ -59,16 +61,28 @@ namespace BO
 
         #region Contrutores
         /// <summary>
-        /// Criar uma vacina com nome, tipo e quantidade
+        /// Criar uma vacina com nome, tipo
         /// </summary>
-        /// <param name="n">nome da vacina</param>
-        /// <param name="t">tipo de vacina</param>
-        /// <param name="q">quantidade de vacina</param>
-        public Vacina(string nome, string tipo, int id)
+        /// <param name="nome">Nome da vacina</param>
+        /// <param name="tipo">Tipo da vacina</param>
+        public Vacina(string nome, string tipo)
         {
             this.nome = nome;
             this.tipo = tipo;
-            this.id = id;
+            //auto incremento do ID da vacina
+            this.id = Interlocked.Increment(ref vacinaId);
+        }
+        #endregion
+
+        #region Overrides
+        /// <summary>
+        /// Imprime a vacina na consola
+        /// </summary>
+        /// <returns>retorna a vacina imprimida</returns>
+        public override string ToString()
+        {
+            string aux = ("ID: " + Id + " Nome: " + Nome + " Tipo Vacina: " + Tipo);
+            return aux;
         }
         #endregion
     }

@@ -16,40 +16,39 @@ namespace TP_LP2_4459_6163
 
             #region Cao
             Cao c = new Cao("Bolinhas", "terrier", "macho", DateTime.Today, "médio", "meigo");
-            Cao c2 = new Cao("Bolinhas", "terrier", "macho", DateTime.Today, "médio", "meigo");
-            Console.WriteLine(c.ToString());
-            //c2.Id = -1;
-            Console.WriteLine(c2.ToString());
+            Cao c2 = new Cao("Pateco", "labrador", "macho", DateTime.Today, "médio", "brincalhao");
+            
             try
             {
+                RegrasParque.InsereCao(c);
+                RegrasParque.InsereCao(c2);
                 if (RegrasParque.InsereCao(c) == true)
-                    Console.WriteLine("ID: " + c.Id);
-                //else
-                //    Console.WriteLine("Insucesso");
-
+                    Console.WriteLine("ID: " + c.Id + "\n");
+                else
+                    Console.WriteLine("Insucesso");
             }
             catch (Excecao e)
             {
-                throw e;
+               
+                Console.WriteLine(e.Message);
             }
 
-            RegrasParque.ProcuraCao(1)
+            Console.WriteLine(c.ToString());
+            Console.WriteLine(c2.ToString());
+
+            if (RegrasParque.ProcuraCao(5) != null)
+            {
+                Console.WriteLine("O cão existe!");
+            }
             #endregion
 
             #region Boletim Sanitario
-            Vacina v = new Vacina("Vacina antirrábica", "Imunológica", -1);
-            try
-            {
-                if (RegrasParque.InsereVacina(v) == true)
-                    Console.WriteLine("ID vacina: " + v.Id);
-                else
-                    Console.WriteLine("Insucesso");
 
-            }
-            catch (Excecao e)
-            {
-                Console.WriteLine(e.Message);
-            }
+            //Vacinas disponiveis
+            RegrasParque.ProcuraTodasVacinas();
+               
+
+           
             #endregion
 
 

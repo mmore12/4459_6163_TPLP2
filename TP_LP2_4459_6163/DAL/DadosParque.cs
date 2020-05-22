@@ -3,6 +3,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -17,7 +18,6 @@ namespace DAL
         private static List<Cao> caes;
         private static List<BoletimSanitario> boletins;
         private static List<Vacina> vacinas;
-
         /// <summary>
         /// 
         /// </summary>
@@ -26,7 +26,12 @@ namespace DAL
 
             caes = new List<Cao>();
             boletins = new List<BoletimSanitario>();
-            vacinas = new List<Vacina>();
+            vacinas = new List<Vacina>() {
+            new Vacina("Primeira vacina", "Vacina das 6 semanas"),
+            new Vacina("Vacina polivalente", "Vacina das 8 semanas"),
+            new Vacina("Vacina antirrábica", "Imunológica"),
+            new Vacina("Vacina Leishmaniose", "Imunológica")
+            };
 
         }
 
@@ -41,9 +46,9 @@ namespace DAL
             foreach (Cao cao in caes)
             {
                 //valida se o cao já existe
-                if(cao.Id == c.Id)
-                { 
-                    return false; 
+                if (cao.Id == c.Id)
+                {
+                    return false;
                 }
             }
             caes.Add(c);
@@ -58,11 +63,15 @@ namespace DAL
         /// <returns></returns>
         public static List<Cao> GetCao(int id)
         {
-            if(id >= 0)
+            if (id >= 0)
             {
                 List<Cao> find = new List<Cao>();
-                find.Add(caes.Find(c => c.Id == id));
-                return find;
+                //procura se o ID do cao existe
+                if (caes.Find(c => c.Id == id) != null)
+                {
+                    find.Add(caes.Find(c => c.Id == id));
+                    return find;
+                }
             }
             return null;
         }
@@ -86,6 +95,26 @@ namespace DAL
             }
             vacinas.Add(vacina);
             return true;
+        }
+
+        /// <summary>
+        /// Mostra todas as vacinas
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public static string GetAllVacinas()
+        {
+            //verifica se a lista tem vacinas
+            if (vacinas != null)
+            {
+                for(int i = 0; i < vacinas.Count; i++)
+                {
+                    //imprime na consola todas as vacinas disponiveis.
+                    Console.WriteLine(vacinas[i]);
+                }
+            }
+            return null;
+            
         }
         /// <summary>
         /// Adicionar um boletim sanitario

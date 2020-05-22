@@ -10,6 +10,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 
 namespace BO
 {
@@ -26,6 +27,7 @@ namespace BO
         int id = 0;
         string nome, raca, genero;
         DateTime data_Nasc;
+        static int animalID;
         #endregion
 
         #region Methods
@@ -50,7 +52,8 @@ namespace BO
             raca = r;
             genero = g;
             data_Nasc = d;
-            id++;
+            //auto incremento do ID do animal
+            this.id = Interlocked.Increment(ref animalID);
         }
         #endregion
 
