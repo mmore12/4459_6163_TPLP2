@@ -1,10 +1,10 @@
 ﻿/*
-*	<copyright file="DAL.cs" company="IPCA">
+*	<copyright file="BO.cs" company="IPCA">
 *		Copyright (c) 2020 All Rights Reserved
 *	</copyright>
-* 	<author>CaronesE</author>
-*   <date>5/21/2020 10:23:20 PM</date>
-*	<description></description>
+* 	<author>Aurélien Bouça e Elden Carones</author>
+*   <date>5/19/2020</date>
+*	<description>Gerir um canil</description>
 **/
 using BO;
 using System;
@@ -17,11 +17,7 @@ namespace DAL
 {
     /// <summary>
     /// Purpose:
-    /// Created by: CaronesE
-    /// Created on: 5/21/2020 10:23:20 PM
     /// </summary>
-    /// <remarks></remarks>
-    /// <example></example>
     public class DadosPessoa
     {
         #region Attributes

@@ -2,9 +2,9 @@
 *	<copyright file="BO.cs" company="IPCA">
 *		Copyright (c) 2020 All Rights Reserved
 *	</copyright>
-* 	<author>CaronesE</author>
-*   <date>5/19/2020 11:09:01 PM</date>
-*	<description></description>
+* 	<author>Aurélien Bouça e Elden Carones</author>
+*   <date>5/19/2020</date>
+*	<description>Gerir um canil</description>
 **/
 using System;
 using System.Collections.Generic;
@@ -14,22 +14,15 @@ using System.Text;
 namespace BO
 {
     /// <summary>
-    /// Purpose:
-    /// Created by: CaronesE
-    /// Created on: 5/19/2020 11:09:01 PM
+    /// Purpose: Classe para gerir um cao
     /// </summary>
-    /// <remarks></remarks>
-    /// <example></example>
     public class Cao : Animal
     {
         #region Attributes
-        string porte, personalidade;
+        string porte, personalidade, raca;
         #endregion
 
-        #region Methods
-
         #region Constructors
-
         /// <summary>
         /// The default Constructor.
         /// </summary>
@@ -37,24 +30,33 @@ namespace BO
         {
         }
         /// <summary>
-        /// Constructor with all elements of animal and a dog 
+        /// Construtor do animal
         /// </summary>
-        /// <param name="n">animal name</param>
-        /// <param name="r">animal breed</param>
-        /// <param name="g">animal genre</param>
-        /// <param name="d">animal birth date</param>
-        /// <param name="p">animal port</param>
-        /// <param name="per">animal personality</param>
-        public Cao(string n, string r, string g, DateTime d, string p, string per) : base(n, r, g, d)
+        /// <param name="nome">nome do animal</param>
+        /// <param name="raca">raça do animal</param>
+        /// <param name="genero">genero do animal</param>
+        /// <param name="data_Nasc">Data nascimento do animal</param>
+        /// <param name="porte">porte do animal</param>
+        /// <param name="personalidade">personalidade do animal</param>
+        public Cao(string nome, string raca, string genero, DateTime data_Nasc, string porte, string personalidade) : base(nome, genero, data_Nasc)
         {
-            porte = p;
-            personalidade = per;
+            this.raca = raca;
+            this.porte = porte;
+            this.personalidade = personalidade;
         }
         #endregion
 
         #region Properties
         /// <summary>
-        /// Propertie to manage the animal port
+        /// Propertie para manipular raça do animal
+        /// </summary>
+        public string Raca
+        {
+            get { return raca; }
+            set { raca = value; }
+        }
+        /// <summary>
+        /// Propertie para manipular porte do animal
         /// </summary>
         public string Porte
         {
@@ -62,7 +64,7 @@ namespace BO
             set { porte = value; }
         }
         /// <summary>
-        /// Propertie to manage the animal personality
+        /// Propertie para manipular personalidade do animal
         /// </summary>
         public string Personalidade
         {
@@ -73,13 +75,13 @@ namespace BO
 
         #region Overrides
         /// <summary>
-        /// 
+        /// Override do metodo tostring para imprimir um cao
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Imprime um cao na consola</returns>
         public override string ToString()
         {
-            string aux = ("ID: " + base.Id + " Nome: " + base.Nome + " Raça: " + base.Raca + " Gênero: " + base.Genero + " Data de Nascimento: " 
-                + base.Data_Nasc + " Porte: " + porte + " Personalidade: " + personalidade);
+            string aux = ("ID: " + base.Id + " Nome: " + base.Nome + " Raça: " + raca + " Gênero: " + base.Genero + " Data de Nascimento: " 
+                + base.DataNasc + " Porte: " + porte + " Personalidade: " + personalidade);
             return aux;
         }
         #endregion
@@ -93,6 +95,5 @@ namespace BO
         }
         #endregion
 
-        #endregion
     }
 }

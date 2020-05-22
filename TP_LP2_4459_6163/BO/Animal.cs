@@ -2,9 +2,9 @@
 *	<copyright file="BO.cs" company="IPCA">
 *		Copyright (c) 2020 All Rights Reserved
 *	</copyright>
-* 	<author>CaronesE</author>
-*   <date>5/19/2020 11:08:51 PM</date>
-*	<description></description>
+* 	<author>Aurélien Bouça e Elden Carones</author>
+*   <date>5/19/2020</date>
+*	<description>Gerir um canil</description>
 **/
 using System;
 using System.Collections.Generic;
@@ -15,22 +15,16 @@ using System.Threading;
 namespace BO
 {
     /// <summary>
-    /// Purpose:
-    /// Created by: CaronesE
-    /// Created on: 5/19/2020 11:08:51 PM
+    /// Purpose: Classe para gerir um animal
     /// </summary>
-    /// <remarks></remarks>
-    /// <example></example>
     public class Animal
     {
         #region Attributes
-        int id = 0;
-        string nome, raca, genero;
-        DateTime data_Nasc;
+        int id;
+        string nome, genero;
+        DateTime dataNasc;
         static int animalID;
         #endregion
-
-        #region Methods
 
         #region Constructors
         /// <summary>
@@ -46,12 +40,10 @@ namespace BO
         /// <param name="r">raça do animal</param>
         /// <param name="g">gênero do animal</param>
         /// <param name="d">data nascimento do animal</param>
-        public Animal(string n, string r, string g, DateTime d)
+        public Animal(string nome, string genero, DateTime dataNasc)
         {
-            nome = n;
-            raca = r;
-            genero = g;
-            data_Nasc = d;
+            this.genero = genero;
+            this.dataNasc = dataNasc;
             //auto incremento do ID do animal
             this.id = Interlocked.Increment(ref animalID);
         }
@@ -74,14 +66,7 @@ namespace BO
             get { return nome; }
             set { nome = value; }
         }
-        /// <summary>
-        /// Propertie para manipular raça do animal
-        /// </summary>
-        public string Raca
-        {
-            get { return raca; }
-            set { raca = value; }
-        }
+        
         /// <summary>
         /// Propertie para manipular genero do animal
         /// </summary>
@@ -93,14 +78,11 @@ namespace BO
         /// <summary>
         /// Propertie para manipular data nascimento do animal
         /// </summary>
-        public DateTime Data_Nasc
+        public DateTime DataNasc
         {
-            get { return data_Nasc; }
-            set { data_Nasc = value; }
+            get { return dataNasc; }
+            set { dataNasc = value; }
         }
-        #endregion
-
-        #region Functions
         #endregion
 
         #region Overrides
@@ -110,7 +92,7 @@ namespace BO
         /// <returns>Retorna todos os dados do animal</returns>
         public override string ToString()
         {
-            string aux = ("Nome: " + nome + " Raça: " + raca + " Gênero: " + genero + " Data de Nascimento: " + data_Nasc);
+            string aux = ("Nome: " + nome + " Gênero: " + genero + " Data de Nascimento: " + dataNasc);
             return aux;
         }
         #endregion
@@ -122,8 +104,6 @@ namespace BO
         ~Animal()
         {
         }
-        #endregion
-
         #endregion
 
     }

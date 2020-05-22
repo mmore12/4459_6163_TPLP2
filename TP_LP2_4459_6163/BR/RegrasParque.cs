@@ -1,4 +1,12 @@
-﻿using BO;
+﻿/*
+*	<copyright file="BO.cs" company="IPCA">
+*		Copyright (c) 2020 All Rights Reserved
+*	</copyright>
+* 	<author>Aurélien Bouça e Elden Carones</author>
+*   <date>5/19/2020</date>
+*	<description>Gerir um canil</description>
+**/
+using BO;
 using DAL;
 using System;
 using System.Collections.Generic;
@@ -22,15 +30,15 @@ namespace BR
         /// <returns>adiciona o cao e retorna verdadeiro, caso contrario retorna falso</returns>
         public static bool InsereCao (Cao c)
         {
-               return DadosParque.AddCao(c);
+               return DadosCao.AddCao(c);
         }
 
 
-        public static List<Cao> ProcuraCao(int id)
+        public static string ProcuraCao(int id)
         {
             if(id >= 0)
             {
-                return DadosParque.GetCao(id);
+                return DadosCao.GetCao(id);
             }
             return null;
         }
@@ -50,7 +58,7 @@ namespace BR
         {
             //apenas adiciona caso o ID seja positivo, não é permitido ID's negativos
             if (v.Id >= 0)
-                return DadosParque.AddVacina(v);
+                return DadosBoletim.AddVacina(v);
             else return false;
           
         }
@@ -61,7 +69,7 @@ namespace BR
         /// <returns></returns>
         public static string ProcuraTodasVacinas()
         {
-           return DadosParque.GetAllVacinas();        
+           return DadosBoletim.GetAllVacinas();        
         }
         #endregion
     }

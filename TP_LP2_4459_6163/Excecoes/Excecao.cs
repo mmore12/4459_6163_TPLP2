@@ -1,9 +1,17 @@
-﻿using System;
+﻿/*
+*	<copyright file="BO.cs" company="IPCA">
+*		Copyright (c) 2020 All Rights Reserved
+*	</copyright>
+* 	<author>Aurélien Bouça e Elden Carones</author>
+*   <date>5/19/2020</date>
+*	<description>Gerir um canil</description>
+**/
+using System;
 
 namespace Excecoes
 {
     /// <summary>
-    /// 
+    /// Classe para gerir excecoes
     /// </summary>
     public class Excecao : ApplicationException
     {

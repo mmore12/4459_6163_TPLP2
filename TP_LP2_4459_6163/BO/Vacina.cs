@@ -2,9 +2,9 @@
 *	<copyright file="BO.cs" company="IPCA">
 *		Copyright (c) 2020 All Rights Reserved
 *	</copyright>
-* 	<author>CaronesE</author>
-*   <date>5/19/2020 11:13:24 PM</date>
-*	<description></description>
+* 	<author>Aurélien Bouça e Elden Carones</author>
+*   <date>5/19/2020</date>
+*	<description>Gerir um canil</description>
 **/
 using System;
 using System.Collections.Generic;
@@ -16,11 +16,7 @@ namespace BO
 {
     /// <summary>
     /// Purpose: Classe para gerir uma vacina
-    /// Created by: CaronesE
-    /// Created on: 5/19/2020 11:13:24 PM
     /// </summary>
-    /// <remarks></remarks>
-    /// <example></example>
     public class Vacina
     {
         #region Estado
@@ -39,7 +35,6 @@ namespace BO
             get { return nome; }
             set { nome = value; }
         }
-
         /// <summary>
         /// Tipo de vacina
         /// </summary>
@@ -48,7 +43,6 @@ namespace BO
             get { return tipo; }
             set { tipo = value; }
         }
-
         /// <summary>
         /// Id da vacina
         /// </summary>

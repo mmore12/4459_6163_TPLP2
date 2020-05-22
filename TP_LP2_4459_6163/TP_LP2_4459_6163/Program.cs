@@ -1,4 +1,12 @@
-﻿using System;
+﻿/*
+*	<copyright file="BO.cs" company="IPCA">
+*		Copyright (c) 2020 All Rights Reserved
+*	</copyright>
+* 	<author>Aurélien Bouça e Elden Carones</author>
+*   <date>5/19/2020</date>
+*	<description>Gerir um canil</description>
+**/
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,10 +28,11 @@ namespace TP_LP2_4459_6163
             
             try
             {
-                RegrasParque.InsereCao(c);
-                RegrasParque.InsereCao(c2);
-                if (RegrasParque.InsereCao(c) == true)
+                if (RegrasParque.InsereCao(c) == true && RegrasParque.InsereCao(c2) == true)
+                {
                     Console.WriteLine("ID: " + c.Id + "\n");
+                    Console.WriteLine("ID: " + c2.Id + "\n");
+                }
                 else
                     Console.WriteLine("Insucesso");
             }
@@ -36,8 +45,9 @@ namespace TP_LP2_4459_6163
             Console.WriteLine(c.ToString());
             Console.WriteLine(c2.ToString());
 
-            if (RegrasParque.ProcuraCao(5) != null)
+            if (RegrasParque.ProcuraCao(2) != null)
             {
+
                 Console.WriteLine("O cão existe!");
             }
             #endregion
